@@ -17,7 +17,8 @@ def word():
         word = start + vocala + mid
 
     return word
-
+#           |-------change to wanted data format
+#          \ /
 with open("word_list.odt", "a") as t:
     with rout(t):
         print(word(), "\n", word(), "\n", word(), "\n", word(), "\n", word(), "\n")
