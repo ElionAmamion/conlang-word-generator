@@ -18,6 +18,6 @@ def word():
 
     return word
 
-with open("word_list.txt", "a") as t:
+with open("word_list.odt", "a") as t:
     with rout(t):
         print(word(), "\n", word(), "\n", word(), "\n", word(), "\n", word(), "\n")
