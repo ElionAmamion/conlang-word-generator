@@ -2,13 +2,13 @@ from contextlib import redirect_stdout as rout
 import random as r
 
 def word():
-    start = r.choice(["b", "c", "d", "f", "g", "j", "k", "l", "m", "n", "r", "s", "t", "v", "y"])
+    start = r.choice(["f", "h", "l", "m", "n", "N", "g", "k", "p", "r", "s", "S", "th", "TH", "w", "s"])
 
-    vocala = r.choice(["a", "e", "ou"])
+    vocala = r.choice(["a:","e", "o"])
 
-    mid = r.choice(["b", "c", "d", "dal", "f", "g", "j", "k", "l", "m", "moun", "n", "r", "ryn", "s", "t", "tsch", "v", "y", "youn"])
+    mid = r.choice(["f", "h", "l", "m", "N", "r", "s", "S", "th", "w"])
 
-    vocalb = r.choice(["a", "e", "ou"])
+    vocalb = r.choice(["a:","e", "e..(r)", "Ou", "o"])
 
     short_long = r.randint(1, 2)
     if short_long == 1:
