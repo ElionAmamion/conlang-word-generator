@@ -1,24 +1,22 @@
-from contextlib import redirect_stdout as rout
 import random as r
 
 def word():
-    start = r.choice(["f", "h", "l", "m", "n", "N", "g", "k", "p", "r", "s", "S", "th", "TH", "w", "s"])
+    start = r.choice(["ʒ", "ð", "ɜ"])
 
-    vocala = r.choice(["a:","e", "o"])
+    vocala = r.choice(["B", "ɢʘ", "ɤ̞"])
 
-    mid = r.choice(["f", "h", "l", "m", "N", "r", "s", "S", "th", "w"])
+    mid = r.choice(["ɱ", "m"])
 
-    vocalb = r.choice(["a:","e", "e..(r)", "Ou", "o"])
+    vocalb = r.choice(["m", "ɾ"])
 
-    short_long = r.randint(1, 2)
-    if short_long == 1:
-        word = start + vocala + mid + vocalb
-    elif short_long == 2:
+    ra = r.randint(1, 2)
+
+    if ra == 1:
         word = start + vocala + mid
+    else:
+        word = start + vocala + mid + vocalb
 
     return word
-#           |-------change to wanted data format
-#          \ /
-with open("word_list.odt", "a") as t:
-    with rout(t):
-        print(word(), "\n", word(), "\n", word(), "\n", word(), "\n", word(), "\n")
+
+for i in "abcdefghijklmnopqrstuvwxy":
+    print(word(), "\n")
